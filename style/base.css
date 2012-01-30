@@ -18,15 +18,17 @@ html {
     padding: 0px;
     width: 800px;
     background-color: #C9A798;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
   }
   #header {
     padding: 0;
-    margin: 0;
-    height: 110px;
+    margin: 10px;
+    height: 80px;
     background-color: #C9A798;
   }
   #header > h1 {
-    padding-top: 45px;
+    padding-top: 35px;
     font-size: 2em;
     font-weight: bold;
     text-align: center;
@@ -39,13 +41,16 @@ html {
   }
   #sideBar > h2 {
     margin: 5px 5px 5px 20px;
-    font-size: 1.7em;
+    font-size: 1.5em;
     font-weight: normal;
     color: #4F2412;
   }
   #sideBar > ul {
-    margin:  0;
-    padding: 5px 5px 5px 5px;
+	margin: 10px;
+    padding:  5px;
+    border: solid 2px #cccccc;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
   }
   #sideBar > ul > li {
     list-style: none;
@@ -60,12 +65,21 @@ html {
     text-decoration: underline;
   }
   #content {
-    margin-left: 200px;
-    padding: 10px;
+    margin: 0 0 0 200px;
+    padding: 20px;
     background-color: #F9F6F4;
+	line-height: 18px;
+	text-align:justify;
+	text-justify:inter-word;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	/*-moz-bottom-right-border-radius: 10px;
+	border-bottom-right-radius: 10px;*/
   }
   #content > h2{
-    font-size: 1.7em;
+    margin-top: 0px;
+	margin-bottom: 7px;
+	font-size: 1.7em;
     font-weight: normal;
     color:#4F2412;
   }
