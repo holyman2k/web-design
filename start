@@ -1,0 +1,2 @@
+rm -rdf photoshop
+node server.js

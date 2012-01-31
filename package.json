@@ -5,5 +5,5 @@
 	"dependencies" : {
 		"mime"   :  ">=1.2.4"
 	},
-	"scripts": {"start": "node ./server.js"}
+	"scripts": {"start": "start.bat"}
 }
