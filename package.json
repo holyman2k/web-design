@@ -1,0 +1,9 @@
+{
+	"name": "charlie-wu",
+	"description" : "my website and a simple http server",
+	"version": "0.0.1",
+	"dependencies" : {
+		"mime"   :  ">=1.2.4"
+	},
+	"scripts": {"start": "node ./server.js"}
+}
