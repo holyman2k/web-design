@@ -11,7 +11,7 @@ body {
 	background-color: #5f6871;
 }
 #wrap {
-	margin:0 auto;
+	margin:0 auto 10px auto;
 	width: 800px;
 	position: relative;
 	background-color: #224a7e;
@@ -19,8 +19,8 @@ body {
 	border-radius: 8px;
 }
 #header {
-	margin: 10px;
 	position: relative;
+	margin: 10px;
 	height: 80px;
 	background-color: #224a7e;
 }
@@ -48,21 +48,30 @@ body {
 }
 #navigation > ul {
 	margin: 0 0 0 35px;
-	padding: 0 0 10px 0;
+	padding: 0;
 }
 #navigation > ul > li{
 	display:inline;
 }
 #navigation > ul > li > a{
+	font-size: 0.9em;
 	font-weight: bold;
 	color: #FFFFFF;
 	text-decoration: none;
-	line-height: 30px;
+	line-height: 34px;
 	padding: 10px 20px 10px 20px;
+	
+	-moz-border-radius: 8px 8px 0 0 ;
+	border-radius: 8px 8px 0 0 ;
 }
 #navigation > ul > li > a:hover{
 	background-color: #FFFFFF;
 	color: #224a7e;
+}
+#banner {
+	height: 200px;
+	background-image:url('../images/banner.png');
+	background-repeat:no-repeat;
 }
 #sideBar{
 	float: left;
