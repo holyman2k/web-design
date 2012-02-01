@@ -19,17 +19,13 @@ http.createServer(function(request, response) {
 		}
 	
 		console.log("file path: " + filename);	
-		
-		//console.log("file exists: " + exists);
-		
+
 		/*if (!exists) {
 		
 			response.writeHead(404, {"Content-Type": "text/plain"});
 			response.end("404 Not Found \n");
 			return;
 		}*/
-		var mineType = mime.lookup(filename);
-		console.log("mine type: " + mineType);	
 		
 		fs.readFile(filename, "binary", function(err, file) {
 		
@@ -38,11 +34,11 @@ http.createServer(function(request, response) {
 				response.end(err + "\n");
 				return;
 			}
-			response.setHeader("Content-Type", mineType);
-			response.statusCode = 200;
+			response.writeHead(200, {"Content-Type": mime.lookup(filename)});
+			//response.writeHead(200);
 			response.end(file, "binary");
 		});
 	});
 }).listen(80);
 
-console.log("Server running at http://localhost:80/");
+console.log("Server running at http://localhost/");
