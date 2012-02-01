@@ -1,5 +1,5 @@
 html {
-	padding: 0;
+    padding: 0;
 	margin: 0;
 }
 body {
@@ -30,18 +30,18 @@ body {
 	top: 13px;
 	left: 6px;
 }
-#header > a {
+#header > a.contact {
 	text-decoration:none;
+    display:inline-block;
+    position:relative;
+    right: 20px;
+    top: 10px;
+	float: right;
 }
-#header > a > div.email {
-	display:inline;
+#header > a.contact > div {
 	background-image:url('../images/email.png');
 	background-repeat:no-repeat;
-	color: #FFFFFF;
-	position:relative;
-	right: 20px;
-	top: 10px;
-	float: right;
+	color: #FFFFFF;	
 	padding-left: 70px;
 	line-height: 60px;
 	font-size:1.5em;
