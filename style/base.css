@@ -27,7 +27,8 @@ body {
 #header > img {
 	display:inline-block;
 	position:relative;
-	top: 8px;
+	top: 13px;
+	left: 6px;
 }
 #header > a {
 	text-decoration:none;
