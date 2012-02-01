@@ -46,6 +46,24 @@ body {
 	line-height: 60px;
 	font-size:1.5em;
 }
+#navigation > ul {
+	margin: 0 0 0 35px;
+	padding: 0 0 10px 0;
+}
+#navigation > ul > li{
+	display:inline;
+}
+#navigation > ul > li > a{
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	line-height: 30px;
+	padding: 10px 20px 10px 20px;
+}
+#navigation > ul > li > a:hover{
+	background-color: #FFFFFF;
+	color: #224a7e;
+}
 #sideBar{
 	float: left;
 	width: 200px;
@@ -91,10 +109,10 @@ body {
 	background-color: #F9F6F4;
 	line-height: 21px;
 	text-align:justify;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	/*-moz-bottom-right-border-radius: 10px;
-	border-bottom-right-radius: 10px;*/
+	/*-moz-border-radius: 8px;
+	border-radius: 8px;*/
+	-moz-bottom-right-border-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 #content > h2{
 	margin-top: 0px;
