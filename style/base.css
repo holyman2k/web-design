@@ -37,13 +37,11 @@ body {
     right: 20px;
     top: 10px;
 	float: right;
-}
-#header > a.contact > div {
-	background-image:url('../images/email.png');
-	background-repeat:no-repeat;
-	color: #FFFFFF;	
-	padding-left: 70px;
-	line-height: 60px;
+    background-image:url('../images/email.png');
+    background-repeat:no-repeat;
+    color: #FFFFFF;
+    padding-left: 70px;
+    line-height: 60px;
 	font-size:1.5em;
 }
 #navigation > ul {
