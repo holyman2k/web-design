@@ -11,21 +11,22 @@ http.createServer(function(request, response) {
 	
 	var filename = path.join(process.cwd(), uri);
 		
-	
 	path.exists(filename, function(exists){
 		
 		if (uri == "/") {
 			filename = path.join(process.cwd(), "index.html");
 		}
 	
-		console.log("file path: " + filename);	
-
-		/*if (!exists) {
+        var mimeType = mime.lookup(filename);
+        
+		console.log("file path: " + filename + ", mime type: " + mimeType);
+        
+		if (!exists) {
 		
 			response.writeHead(404, {"Content-Type": "text/plain"});
 			response.end("404 Not Found \n");
 			return;
-		}*/
+		}
 		
 		fs.readFile(filename, "binary", function(err, file) {
 		
@@ -34,11 +35,11 @@ http.createServer(function(request, response) {
 				response.end(err + "\n");
 				return;
 			}
-			response.writeHead(200, {"Content-Type": mime.lookup(filename)});
+			response.writeHead(200, {"Content-Type": mimeType});
 			//response.writeHead(200);
 			response.end(file, "binary");
 		});
 	});
-}).listen(80);
+}).listen(process.env.C9_PORT);
 
 console.log("Server running at http://localhost/");
