@@ -6,21 +6,19 @@ var sys = require("util"),
 	mime = require("mime");
     
 var port = process.env.C9_PORT;
-port = port == "" ? "80" : port;
-	
+port = port == undefined ? "80" : port;
+
 http.createServer(function(request, response) {
 	
 	var uri = url.parse(request.url).pathname;
 	
 	var filename = path.join(process.cwd(), uri);
 		
-	path.exists(filename, function(exists){
-		
-		if (uri == "/") {
-			filename = path.join(process.cwd(), "index.html");
-		}
+	filename = uri == "/" ? path.join(process.cwd(), "index.html") : filename;
 	
-        var mimeType = mime.lookup(filename);
+	path.exists(filename, function(exists){
+	
+		var mimeType = mime.lookup(filename);
         
 		console.log("file path: " + filename + ", mime type: " + mimeType);
         
@@ -38,11 +36,11 @@ http.createServer(function(request, response) {
 				response.end(err + "\n");
 				return;
 			}
-			response.writeHead(200, {"Content-Type": mimeType});
-			//response.writeHead(200);
+			response.writeHead(200, {"Content-Type": mimeType}); //response.writeHead(200);
+			
 			response.end(file, "binary");
 		});
 	});
-}).listen(process.env.C9_PORT);
+}).listen(port);
 
-console.log("Server running at http://localhost/");
+console.log("Server running at http://localhost:" + port + "/");
