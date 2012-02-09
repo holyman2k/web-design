@@ -4,6 +4,9 @@ var sys = require("util"),
 	path = require("path"),
 	fs = require("fs"),
 	mime = require("mime");
+    
+var port = process.env.C9_PORT;
+port = port == "" ? "80" : port;
 	
 http.createServer(function(request, response) {
 	
