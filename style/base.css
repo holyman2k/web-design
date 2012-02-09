@@ -59,7 +59,6 @@ body {
 	text-decoration: none;
 	line-height: 34px;
 	padding: 10px 20px 10px 20px;
-	
 	-moz-border-radius: 8px 8px 0 0 ;
 	border-radius: 8px 8px 0 0 ;
 }
@@ -69,7 +68,7 @@ body {
 }
 #banner {
 	height: 200px;
-	background-image:url('../images/banner.png');
+	background-image:url('../images/banner.jpg');
 	background-repeat:no-repeat;
 }
 #sideBar{
